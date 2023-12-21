@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytery Password</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <p id="date" class="current-date"></p>
+    <h2 class="heading">Wirst du das Rätsel lösen?</h2>
+    <a href="#content" id="los">&#8681;</a>
+    <div style="height: 100vh"></div>
+    <div id="content">
+        <div class="pw">
+            <label class="pw-label" for="password">Wie lautet das Passwort?</label>
+            <input class="pw-input" type="password" id="password" name="password" >
+            <button type="submit" onclick="submitPw()">Bestätigen</button>
+            <div class="error" id="error"></div>
+        </div>
+    </div>
+    <script src="date.js"></script>
+    <script src="password.js"></script>
+  </body>
+</html>
