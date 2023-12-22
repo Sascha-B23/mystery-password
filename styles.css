@@ -103,3 +103,8 @@ html {
   .current-date {
     padding: 4% 2% 2% 3%;
   }
+
+  #countdown {
+    font-size: 80px;
+    font-family: fantasy;
+  }

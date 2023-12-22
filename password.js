@@ -1,8 +1,8 @@
-const password = "Exitanos"
+const password = "exitanos"
 let errorCtr = 4
 
 function validtePw(pw) {
-    if (pw === password && errorCtr >= 0) {
+    if (pw.toLowerCase() === password.toLowerCase() && errorCtr >= 0) {
         return true;
     }
     errorCtr -= 1;
@@ -14,7 +14,9 @@ function submitPw() {
     const valid = validtePw(pw)
     if (valid) {
         window.open("https://www.exitanos.de/unsere-r%C3%A4ume")
-        document.getElementById("error").innerHTML = "Geschafft!"
+        document.getElementById("error").innerHTML = "Hurra! Geschafft!"
     }
-    document.getElementById("error").innerHTML = errorCtr !== 1 ? `Falsch! Ihr habt noch ${errorCtr} Versuche!` : 'Falsch! Ihr habt noch einen Versuch!'
+    else {
+        document.getElementById("error").innerHTML = errorCtr !== 1 ? `Falsch! Ihr habt noch ${errorCtr} Versuche!` : 'Falsch! Ihr habt noch einen Versuch!'
+    }
 }
