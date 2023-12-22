@@ -1,3 +1,5 @@
+var clear = false
+
 function clock() {
     myTimer = setInterval(myClock, 1000);
     var c = 1800; //Initially set to 30 mins
@@ -11,7 +13,7 @@ function clock() {
         var hours = (secondsInMinutes - minutes) / 60;
         // Now in hours, minutes and seconds, you have the time you need.
         document.getElementById("countdown").innerHTML = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
-        if (c == 0) {
+        if (c == 0 || clear) {
             clearInterval(myTimer);
         }
     }
